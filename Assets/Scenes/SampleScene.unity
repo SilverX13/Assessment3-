@@ -385,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154128381}
   - component: {fileID: 154128380}
+  - component: {fileID: 154128382}
   m_Layer: 0
   m_Name: Ghost1
   m_TagString: Untagged
@@ -459,6 +460,26 @@ Transform:
   m_Father: {fileID: 1058117735}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &154128382
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154128378}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8afc782642bb3df47b519561bacd7ea3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &160605353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058117735}
+  - component: {fileID: 1058117736}
   m_Layer: 0
   m_Name: AnimationManager
   m_TagString: Untagged
@@ -3016,6 +3038,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058117736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058117734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631fae44211f92d4f9bdd5c2c640f2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pacStudent1Animator: {fileID: 481576897}
+  powerPelletAnimator: {fileID: 1494817070}
+  pacDeadAnimator: {fileID: 1294868346}
+  ghostScaredAnimator: {fileID: 2106631710}
+  ghostDeadAnimator: {fileID: 749999961}
+  ghost1Animator: {fileID: 154128382}
+  ghost2Animator: {fileID: 428581942}
+  ghost3Animator: {fileID: 284359505}
+  ghost4Animator: {fileID: 2075643635}
+  playButton: {fileID: 1746692116}
 --- !u!1 &1100492825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,6 +4998,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1591890597}
         m_TargetAssemblyTypeName: MusicCon, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1058117736}
+        m_TargetAssemblyTypeName: TriggerAnimations, Assembly-CSharp
+        m_MethodName: OnPlayButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
